@@ -1,0 +1,65 @@
+.quoteSection {
+  padding: 6rem 2rem; /* زودنا المسافة شوية عشان يبقى فيه براح */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quoteWrapper {
+  background-color: var(--surface-color);
+  padding: 4rem; /* زودنا المسافات الداخلية للكارت */
+  border-radius: 20px; /* خلينا الحواف دائرية أكتر */
+  max-width: 900px; /* كبرنا عرض الكارت شوية */
+  width: 100%;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* ظل أعمق وأوضح */
+  position: relative; /* عشان نعمل تأثير علامات التنصيص الكبيرة */
+  overflow: hidden; /* عشان التأثير ما يطلعش برا الكارت */
+}
+
+/* --- تأثير علامات التنصيص الكبيرة في الخلفية --- */
+.quoteWrapper::before,
+.quoteWrapper::after {
+  content: '“'; /* علامات التنصيص المزدوجة */
+  position: absolute;
+  font-size: 15rem; /* حجم ضخم */
+  color: rgba(255, 255, 255, 0.05); /* لون رمادي فاتح وشفاف جدًا */
+  font-family: 'Times New Roman', serif; /* خط كلاسيكي */
+  z-index: 0; /* تحت النص */
+  line-height: 1;
+}
+
+.quoteWrapper::before {
+  top: -30px; /* مكان علامة التنصيص اللي فوق */
+  left: 20px;
+  transform: rotate(-10deg);
+}
+
+.quoteWrapper::after {
+  content: '”'; /* علامات التنصيص المزدوجة */
+  bottom: -70px; /* مكان علامة التنصيص اللي تحت */
+  right: 20px;
+  transform: rotate(10deg);
+}
+/* --- نهاية تأثير علامات التنصيص الكبيرة --- */
+
+.quote {
+  font-family: var(--font-serif, 'Cairo');
+  font-size: 2.2rem; /* كبرنا الخط أكتر */
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text-color);
+  position: relative; /* عشان النص يبقى فوق علامات التنصيص */
+  z-index: 1;
+  font-weight: 500; /* خلينا الخط أتقل شوية */
+}
+
+.author {
+  margin-top: 2rem; /* زودنا المسافة */
+  font-size: 1.1rem; /* كبرنا الخط شوية */
+  color: var(--text-secondary-color);
+  font-style: normal;
+  position: relative;
+  z-index: 1;
+}

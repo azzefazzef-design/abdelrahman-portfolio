@@ -1,0 +1,106 @@
+.aboutSection {
+  padding: 4rem 2rem;
+}
+
+.aboutCard {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--surface-color);
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 992px) {
+  .aboutCard {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.aboutText h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.aboutText p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary-color);
+}
+
+/* --- هنا الستايل الصحيح للزرار --- */
+.cvButton {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Cairo', sans-serif;
+
+  /* --- الإضافات لإلغاء الستايل الافتراضي --- */
+  border: none; /* شيلنا الحدود الافتراضية */
+  cursor: pointer; /* عشان شكل الماوس يبقى صح */
+  font-size: 1rem; /* توحيد حجم الخط */
+}
+
+.cvButton:hover {
+  background-color: #5a0b99;
+  transform: translateY(-3px);
+}
+/* ------------------------------ */
+
+.skills h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.softwareGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.softwareItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+}
+
+.softwareItem svg {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+.softwareItem:hover svg {
+    color: var(--text-color);
+}
+
+.personalSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skillTag {
+  background-color: #2a2a2a;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}

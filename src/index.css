@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #6a0dad;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-secondary-color: #a0a0a0;
+    --font-serif: 'Cairo', serif;
+}
+body, a, button { 
+    cursor: none; /* إخفاء مؤشر الماوس الأصلي */
+}
+body { 
+    margin: 0; font-family: 'Cairo', sans-serif; 
+    background-color: var(--background-color); 
+    color: var(--text-color); 
+}
+* { box-sizing: border-box; }

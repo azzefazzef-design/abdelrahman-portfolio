@@ -1,0 +1,36 @@
+.shapesContainer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+.shape { position: absolute; transition: transform 0.3s ease-out; will-change: transform; }
+
+/* --- الأشكال الجديدة --- */
+.cropMark {
+  width: 40px; height: 40px; top: 10%; left: 15%;
+}
+.cropMark::before, .cropMark::after {
+  content: ''; position: absolute; background-color: var(--surface-color);
+}
+.cropMark::before { width: 100%; height: 1px; top: 0; left: -50%; }
+.cropMark::after { width: 1px; height: 100%; left: 0; top: -50%; }
+
+.cmykCircles {
+  width: 120px; height: 120px; top: 20%; left: 80%;
+}
+.cmykCircles div {
+  position: absolute; border-radius: 50%; mix-blend-mode: screen; /* تأثير دمج الألوان */
+}
+.cmykCircles div:nth-child(1) { width: 70px; height: 70px; background: rgba(106, 13, 173, 0.2); top: 0; left: 0; }
+.cmykCircles div:nth-child(2) { width: 70px; height: 70px; background: rgba(106, 13, 173, 0.2); bottom: 0; left: 40%; }
+.cmykCircles div:nth-child(3) { width: 70px; height: 70px; background: rgba(106, 13, 173, 0.2); top: 30%; right: 0; }
+
+.triangle {
+  width: 0; height: 0; top: 80%; left: 85%;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 70px solid var(--surface-color);
+}
+
+.svgCurve { width: 100px; top: 50%; left: 5%; }
+.plus { /* Plus sign from before */ width: 50px; height: 50px; top: 85%; left: 25%; }
+.plus::before, .plus::after { content: ''; position: absolute; background-color: var(--text-secondary-color); }
+.plus::before { width: 100%; height: 1px; top: 50%; }
+.plus::after { width: 1px; height: 100%; left: 50%; }
+.line { /* Line from before */ width: 150px; height: 1px; background-color: var(--surface-color); top: 15%; left: 60%; }
